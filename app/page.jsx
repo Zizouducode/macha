@@ -24,6 +24,8 @@ export default async function Home() {
   } catch (error) {
     console.log(error.message);
   }
+  console.log("data>>>", data);
+
   return (
     <main>
       <ThemeProvider>
