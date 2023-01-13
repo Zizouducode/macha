@@ -7,6 +7,7 @@ async function getData() {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/todos`
     );
+    console.log("response>>>", response);
     return response.json();
   } catch (error) {
     console.log(error.message);
