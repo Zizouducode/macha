@@ -22,8 +22,10 @@ const handler = async (req, res) => {
       res.status(400).json(error.message);
     }
   } else if (req.method === "GET") {
+    console.log("je suis ici");
     try {
       const allTasks = await Todo.find();
+      console.log("alltasks>>>", allTasks);
       res.status(200).json(allTasks);
     } catch (error) {
       res.status(400).json(error.message);
