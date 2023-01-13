@@ -8,6 +8,7 @@ const connectDB = (handler) => async (req, res) => {
 
   // Sinon, on se connecte
   await mongoose.connect(process.env.MONGODB_URI);
+  mongoose.set("strictQuery", false);
 
   return handler(req, res);
 };
