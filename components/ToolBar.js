@@ -11,9 +11,13 @@ const Toolbar = ({ data }) => {
   const { theme } = useThemeContext();
   const [sort, setSort] = useState(false);
 
-  const dataFilterDone = data.filter((done) => done.isDone === true);
+  let dataFilterDone;
+  let dataFilterUndone;
+  if (data) {
+    dataFilterDone = data.filter((done) => done.isDone === true);
 
-  const dataFilterUndone = data.filter((undone) => undone.isDone === false);
+    dataFilterUndone = data.filter((undone) => undone.isDone === false);
+  }
 
   return (
     <div className={`${theme ? "bg-white" : "bg-black"}`}>
