@@ -2,6 +2,7 @@ import connectDB from "../../../middlewares/connectDB";
 import Todo from "../../../models/Todo";
 
 const handler = async (req, res) => {
+  console.log("je suis ici");
   if (req.method === "POST") {
     const body = JSON.parse(req.body);
 
