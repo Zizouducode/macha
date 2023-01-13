@@ -5,7 +5,7 @@ import Toolbar from "../components/ToolBar";
 async function getData() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/todos`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/todos/index`,
       { cache: "no-store" }
     );
     console.log("response.json()>>>", response.json());
