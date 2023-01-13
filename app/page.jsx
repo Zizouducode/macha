@@ -29,7 +29,9 @@ export default async function Home() {
 
   return (
     <main>
-      <ThemeProvider>{/* <Toolbar data={data} /> */}</ThemeProvider>
+      <ThemeProvider>
+        <Toolbar data={data} />
+      </ThemeProvider>
     </main>
   );
 }
