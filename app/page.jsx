@@ -6,7 +6,7 @@ async function getData() {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/todos`,
-      { cache: "no-store", method: "GET" }
+      { cache: "no-store" }
     );
     console.log("response.json()>>>", response.json());
     return response.json();
