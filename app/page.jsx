@@ -5,9 +5,12 @@ import Toolbar from "../components/ToolBar";
 async function getData() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/todos`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/todos`,
+      {
+        method: "GET",
+      }
     );
-    console.log("response>>>", response);
+
     return response.json();
   } catch (error) {
     console.log(error.message);
